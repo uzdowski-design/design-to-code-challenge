@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Exo;
+  src: url('/fonts/Exo.ttf') format('truetype');
+}
+
+:root {
+  font-family: Exo, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.25;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+}
+
+.gradient {
+  @apply bg-gradient-to-r from-lime via-violet to-purple;
+}
+.text_gradient {
+  @apply bg-clip-text text-transparent gradient;
+}
+.text_advert_bar {
+  @apply bg-gray-300 text-[#111010] font-inter text-sm/[17px] font-medium;
+}
+
+/* Custom Slider styles START */
+input[type='range'].custom-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #252525;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Remove Thumb for WebKit (Chrome, Safari, Edge) */
+input[type='range'].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+/* Remove Thumb for Firefox */
+input[type='range'].custom-slider::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+}
+
+/* Remove Thumb for Internet Explorer */
+input[type='range'].custom-slider::-ms-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+}
+
+/* Styling filled portion for IE */
+input[type='range'].custom-slider::-ms-fill-lower {
+  background: #caea71;
+  border-radius: 2px;
+}
+
+/* Styling remaining track for IE */
+input[type='range'].custom-slider::-ms-fill-upper {
+  background: #252525;
+  border-radius: 2px;
+}
+
+/* Styling filled portion for Firefox */
+input[type='range'].custom-slider::-moz-range-progress {
+  background: #caea71;
+  border-radius: 2px;
+}
+
+/* Styling remaining track for Firefox */
+input[type='range'].custom-slider::-moz-range-track {
+  background: #252525;
+  border-radius: 2px;
+}
+/* Custom Slider styles END */
